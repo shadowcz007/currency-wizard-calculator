@@ -29,7 +29,7 @@ export const currencies: Currency[] = [
 // 获取汇率数据
 export const fetchExchangeRates = async (baseCurrency: string): Promise<ExchangeRates> => {
   try {
-    const response = await fetch(`https://api.frankfurter.dev/latest?base=${baseCurrency}`);
+    const response = await fetch(`https://api.frankfurter.dev/v1/latest?base=${baseCurrency}`);
     if (!response.ok) {
       throw new Error('Failed to fetch exchange rates');
     }
